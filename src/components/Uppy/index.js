@@ -49,8 +49,8 @@ function UppyUploader({ onUpload, allowedFileTypes = ['image/*'] }) {
     },
   })
     .use(AwsS3, { companionUrl: window.REACT_APP_COMPANION_URL })
-    .use(Url, { companionUrl: window.REACT_APP_COMPANION_URL })
-    .use(GoogleDrive, { companionUrl: window.REACT_APP_COMPANION_URL })
+    //.use(Url, { companionUrl: window.REACT_APP_COMPANION_URL })
+    //.use(GoogleDrive, { companionUrl: window.REACT_APP_COMPANION_URL })
     .use(ImageEditor, {
       id: 'ImageEditor',
 
@@ -97,7 +97,8 @@ function UppyUploader({ onUpload, allowedFileTypes = ['image/*'] }) {
   return (
     <Dashboard
       uppy={uppy}
-      plugins={['GoogleDrive', 'Url', 'ImageEditor']}
+      plugins={['ImageEditor']}
+      // plugins={['GoogleDrive', 'Url', 'ImageEditor']}
       metaFields={[
         { id: 'name', name: 'Name', placeholder: 'file name' },
         { id: 'caption', name: 'Caption', placeholder: 'describe what the image is about' },

@@ -326,8 +326,6 @@ class UppyUploader {
           height: 470,
           browserBackButtonClose: true,
         })
-        .use(GoogleDrive, { target: Dashboard, companionUrl: window.REACT_APP_COMPANION_URL })
-        .use(Url, { target: Dashboard, companionUrl: window.REACT_APP_COMPANION_URL })
         .use(AwsS3, { companionUrl: window.REACT_APP_COMPANION_URL });
       uppy.on('file-added', (file) => {
         const data = file.data;
