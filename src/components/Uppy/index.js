@@ -98,7 +98,6 @@ function UppyUploader({ onUpload, allowedFileTypes = ['image/*'] }) {
     <Dashboard
       uppy={uppy}
       plugins={['ImageEditor']}
-      // plugins={['GoogleDrive', 'Url', 'ImageEditor']}
       metaFields={[
         { id: 'name', name: 'Name', placeholder: 'file name' },
         { id: 'caption', name: 'Caption', placeholder: 'describe what the image is about' },
